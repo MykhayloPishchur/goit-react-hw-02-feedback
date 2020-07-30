@@ -5,9 +5,6 @@ import Section from "./Components/Section/Section";
 import Notification from "./Components/Notification/Notification";
 
 export default class App extends Component {
-  static propTypes = {};
-  static defaultProps = {};
-
   state = {
     good: 0,
     neutral: 0,

@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
+import styles from "./stats.module.css";
 
 const Stats = ({ good, neutral, bad, total }) => {
   return (
     <div>
-      <ul>
+      <ul className={styles.stats}>
         <li>Good : {good}</li>
         <li>Neutral : {neutral}</li>
         <li>Bad : {bad}</li>
@@ -12,6 +14,15 @@ const Stats = ({ good, neutral, bad, total }) => {
     </div>
   );
 };
+
+Stats.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+};
+
+export default Stats;
 
 // const countTotal = (data, searchValue) => {
 //   const countTotal = Object.values(data).reduce((a, b) => a + b);
@@ -33,5 +44,3 @@ const Stats = ({ good, neutral, bad, total }) => {
 //     </div>
 //   );
 // };
-
-export default Stats;
